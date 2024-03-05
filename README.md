@@ -1,4 +1,4 @@
-# hawks-code.github.io
+# [hawks-code.github.io](https://hawks-code.github.io/)
 GitHub Pages Hosted Website
 
 # Resources

@@ -38,6 +38,12 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
+# build output
+dist/
+
+# generated types
+.astro/
+
 # Dependency directories
 node_modules/
 jspm_packages/
@@ -76,6 +82,7 @@ web_modules/
 .env
 .env.development.local
 .env.test.local
+.env.production
 .env.production.local
 .env.local
 
@@ -128,3 +135,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# macOS-specific files
+.DS_Store

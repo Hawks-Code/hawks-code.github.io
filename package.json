@@ -1,0 +1,38 @@
+{
+	"name": "hawks-code-site",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"prettier": "prettier --write **/*.astro .",
+		"lint": "eslint --ext .js,.astro src",
+		"prepare": "husky && husky install"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.5.5",
+		"@astrojs/tailwind": "^5.1.0",
+		"astro": "^4.4.4",
+		"astro-icon": "^1.1.0",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.3.3"
+	},
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.10",
+		"@typescript-eslint/parser": "^7.1.1",
+		"eslint": "^8.57.0",
+		"eslint-plugin-astro": "^0.31.4",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0",
+		"prettier-plugin-tailwindcss": "^0.5.11"
+	},
+	"lint-staged": {
+		"*.{js,css,md,astro}": "prettier --write",
+		"*.{js,astro}": "eslint --cache --fix"
+	}
+}

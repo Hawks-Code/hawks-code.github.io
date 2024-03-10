@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+
+const projectEntries = await getCollection("projects");
+---
+
+<section class="min-h-svh bg-hawks-blue p-4 sm:p-8 md:p-16 lg:p-24" id="projects">
+	<div
+		class="bg-blur-lg min-h-[50vh] rounded-lg bg-black bg-opacity-20 p-2 text-white shadow-2xl sm:p-8"
+	>
+		<h2 class="pb-4 text-xl font-bold shadow-black text-shadow sm:text-2xl md:text-4xl">
+			Projects
+		</h2>
+		<ul class="pb-4">
+			{
+				projectEntries.map((entry) => (
+					<li>
+						<a class="underline" href={`/projects/${entry.slug}`}>
+							{entry.data.title}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+		(I really didn't feel like trying to make this look good right now)
+	</div>
+</section>

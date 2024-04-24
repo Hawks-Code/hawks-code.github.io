@@ -1,6 +1,6 @@
-# [hawks-code.github.io](https://hawks-code.github.io/)
+# [hawk.codes](https://hawk.codes/)
 
-This repository contains the source code for the [hawks-code.github.io](https://hawks-code.github.io/) site. In addition to being the primary website of Hawks Code Computer Science Club, the site is also intended to be a collaborative project that is maintained by the entire club.
+This repository contains the source code for the [hawk.codes](https://hawk.codes/) site. In addition to being the primary website of Hawks Code Computer Science Club, the site is also intended to be a collaborative project that is maintained by the entire club.
 
 The website is written in the Astro framework and is deployed as a static site after undergoing the build process.
 

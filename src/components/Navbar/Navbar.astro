@@ -4,7 +4,8 @@ import { Icon } from "astro-icon/components";
 const navbarLinks = [
 	{ display: "Home", link: "/#home" },
 	{ display: "About Us", link: "/#about-us" },
-	{ display: "Projects", link: "/#projects" }
+	{ display: "Projects", link: "/#projects" },
+	{ display: "Join Our Discord", link: "/discord", icon: "/src/assets/discord-icon-white.svg" }
 ];
 ---
 
@@ -17,11 +18,20 @@ const navbarLinks = [
 		<nav class="hidden lg:block" id="desktop-nav-menu">
 			<ul class="flex gap-4 text-white">
 				{
-					navbarLinks.map(({ display, link }) => {
+					navbarLinks.map(({ display, link, icon }) => {
 						return (
 							<li>
 								<a href={link}>
-									<div class="p-2 text-center text-white shadow-black text-shadow">{display}</div>
+									<div class="p-2 text-center text-white shadow-black text-shadow">
+										{display}
+										{icon && (
+											<img
+												class="mx-1 inline max-w-6"
+												style="filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 0.4));"
+												src={icon}
+											/>
+										)}
+									</div>
 								</a>
 							</li>
 						);
@@ -33,12 +43,19 @@ const navbarLinks = [
 	<nav class="hidden bg-transparent lg:hidden" id="mobile-nav-menu">
 		<ul>
 			{
-				navbarLinks.map(({ display, link }) => {
+				navbarLinks.map(({ display, link, icon }) => {
 					return (
 						<li>
 							<a href={link}>
 								<div class="bg-hawks-blue p-2 text-center text-white shadow-black text-shadow">
 									{display}
+									{icon && (
+										<img
+											class="mx-1 inline max-w-6"
+											style="filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 0.4));"
+											src={icon}
+										/>
+									)}
 								</div>
 							</a>
 						</li>

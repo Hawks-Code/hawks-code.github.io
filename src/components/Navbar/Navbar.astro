@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import discordIcon from "/src/assets/discord-icon-white.svg";
+import discordIcon from "/src/assets/discord-logo-sprite.png";
 
 const navbarLinks = [
 	{ display: "Home", link: "/#home" },
@@ -68,7 +68,7 @@ const navbarLinks = [
 </header>
 
 <script>
-	const navMenu = document.querySelector<HTMLButtonElement>("#mobile-nav-menu");
+	const navMenu = document.querySelector("#mobile-nav-menu");
 	if (navMenu) {
 		document.querySelector("#burger")?.addEventListener("click", () => {
 			navMenu.classList.toggle("hidden");

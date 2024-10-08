@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import HomeLayout from "../../layouts/HomeLayout/HomeLayout.astro";
+
+export async function getStaticPaths() {
+	const blogEntries = await getCollection("blog");
+	return blogEntries.map((post) => {
+		return {
+			params: { slug: post.slug },
+			props: { post }
+		};
+	});
+}
+
+const { post } = Astro.props;
+
+const { Content } = await post.render();
+---
+
+<HomeLayout>
+	<section class="bg-black bg-checkered bg-cover" id="home">
+		<div class="min-h-svh pb-10 sm:px-4 lg:pl-40">
+			<div class="min-h-[12rem]"></div>
+			<Content />
+		</div>
+	</section>
+</HomeLayout>
